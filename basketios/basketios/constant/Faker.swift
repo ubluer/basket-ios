@@ -14,21 +14,21 @@ import Foundation
 class Faker {
     
     static let sharedInstance = Faker()
-    ///虚拟用户列表
-    var users = [User]()
+    ///虚拟用户列
+    var users = [String:User]()
     
     private init(){
         self.users = self.fakeUsers();
     }
     
-    private func fakeUsers() -> [User]{
-        var users = [User]()
+    private func fakeUsers() -> [String:User]{
+        var users = [String:User]()
         //初始化虚拟用户列表
-        users.append(User(username: "fly",password: "123456"))
-        users.append(User(username: "fish",password: "123456"))
-        users.append(User(username: "team",password: "123456"))
-        users.append(User(username: "admin",password: "123456"))
-        users.append(User(username: "refer",password: "123456"))
+        users.updateValue(User(username: "fly",password: "123456"),forKey: "fly")
+        users.updateValue(User(username: "fish",password: "123456"), forKey: "fish")
+        users.updateValue(User(username: "team",password: "123456"), forKey: "team")
+        users.updateValue(User(username: "admin",password: "123456"), forKey: "admin")
+        users.updateValue(User(username: "refer",password: "123456"), forKey: "refer")
         return users
     }
 }

@@ -11,6 +11,8 @@
 		F07F285E1D2565DD00AF103D /* Faker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07F285D1D2565DD00AF103D /* Faker.swift */; };
 		F07F28631D27E18E00AF103D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07F28621D27E18E00AF103D /* User.swift */; };
 		F07F28661D2806AA00AF103D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07F28651D2806AA00AF103D /* UserService.swift */; };
+		F07F28681D28A29100AF103D /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07F28671D28A29100AF103D /* Session.swift */; };
+		F07F286B1D28FF0E00AF103D /* Sugue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07F286A1D28FF0E00AF103D /* Sugue.swift */; };
 		F09FBC891D03C896004A7F6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09FBC881D03C896004A7F6D /* AppDelegate.swift */; };
 		F09FBC8B1D03C896004A7F6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09FBC8A1D03C896004A7F6D /* ViewController.swift */; };
 		F09FBC8E1D03C896004A7F6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F09FBC8C1D03C896004A7F6D /* Main.storyboard */; };
@@ -50,6 +52,8 @@
 		F07F285D1D2565DD00AF103D /* Faker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Faker.swift; path = constant/Faker.swift; sourceTree = "<group>"; };
 		F07F28621D27E18E00AF103D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F07F28651D2806AA00AF103D /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = service/UserService.swift; sourceTree = "<group>"; };
+		F07F28671D28A29100AF103D /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Session.swift; path = session/Session.swift; sourceTree = "<group>"; };
+		F07F286A1D28FF0E00AF103D /* Sugue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sugue.swift; sourceTree = "<group>"; };
 		F09FBC851D03C896004A7F6D /* basketios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = basketios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F09FBC881D03C896004A7F6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F09FBC8A1D03C896004A7F6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +118,14 @@
 			name = service;
 			sourceTree = "<group>";
 		};
+		F07F28691D28A31600AF103D /* session */ = {
+			isa = PBXGroup;
+			children = (
+				F07F28671D28A29100AF103D /* Session.swift */,
+			);
+			name = session;
+			sourceTree = "<group>";
+		};
 		F09FBC7C1D03C896004A7F6D = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +149,7 @@
 		F09FBC871D03C896004A7F6D /* basketios */ = {
 			isa = PBXGroup;
 			children = (
+				F07F28691D28A31600AF103D /* session */,
 				F07F28641D28050700AF103D /* service */,
 				F07F28611D27E17C00AF103D /* data */,
 				F0AAB2DC1D1C233B00C9F50B /* constant */,
@@ -197,6 +210,7 @@
 			children = (
 				F0AAB2D41D1ACE8C00C9F50B /* Storyboard.swift */,
 				F07F285D1D2565DD00AF103D /* Faker.swift */,
+				F07F286A1D28FF0E00AF103D /* Sugue.swift */,
 			);
 			name = constant;
 			sourceTree = "<group>";
@@ -337,6 +351,7 @@
 				F0AAB2CF1D168C6000C9F50B /* RootViewController.swift in Sources */,
 				F0AAB2DE1D1FA49700C9F50B /* TeamRecordTableViewController.swift in Sources */,
 				F0AAB2D11D197E6C00C9F50B /* ArenaTableViewController.swift in Sources */,
+				F07F28681D28A29100AF103D /* Session.swift in Sources */,
 				F0AAB2C61D1683D600C9F50B /* LoginViewController.swift in Sources */,
 				F07F285C1D2563A400AF103D /* MeTableViewController.swift in Sources */,
 				F09FBC8B1D03C896004A7F6D /* ViewController.swift in Sources */,
@@ -346,6 +361,7 @@
 				F0AAB2DB1D1C232100C9F50B /* MessageTableViewController.swift in Sources */,
 				F09FBC891D03C896004A7F6D /* AppDelegate.swift in Sources */,
 				F07F285E1D2565DD00AF103D /* Faker.swift in Sources */,
+				F07F286B1D28FF0E00AF103D /* Sugue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

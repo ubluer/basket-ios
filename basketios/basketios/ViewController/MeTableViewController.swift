@@ -13,12 +13,19 @@ class MeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //进入个人信息页面之前需要确定是否已登录
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        if Session.sharedInstance.isLogin() {
+            self.parentViewController!.performSegueWithIdentifier(SugueIdentifier.loginSugue, sender: self)
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +44,19 @@ class MeTableViewController: UITableViewController {
 //        // #warning Incomplete implementation, return the number of rows
 //        return 0
 //    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    
+        switch indexPath.section {
+        case 3:
+            UserService.logout()
+            //登录页面
+            self.parentViewController!.performSegueWithIdentifier(SugueIdentifier.loginSugue, sender: self)
+            break
+        default:
+            break
+        }
+    }
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

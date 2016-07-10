@@ -10,11 +10,32 @@ import Foundation
 
 class UserService {
     
-    func login(username: String,password:String) -> Bool {
-        return true
+    static func login(username username: String,password:String) -> Bool {
+        if let user = getUser(username: username) {
+            if authenticate(user, password:password){
+                Session.sharedInstance.currentUser = user;
+                return true
+            }
+        }
+        return false
     }
     
-    private func getUser(username:String,password:String) -> User{
-        return Faker.sharedInstance.users[0]
+    ///获取通过用户名信息
+    private static func getUser(username username:String) -> User?{
+        return Faker.sharedInstance.users[username]
     }
+    
+    private static func authenticate(user:User,password:String) -> Bool{
+        if let pswInData = user.password {
+            if pswInData == password {
+                return true
+            }
+        }
+        return false
+    }
+    
+    static func logout(){
+        Session.sharedInstance.currentUser = nil
+    }
+
 }

@@ -10,10 +10,28 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBAction func login(sender: UIButton) {
-        if let navigation = navigationController {
-            navigation.popToRootViewControllerAnimated(true)
+        var username = ""
+        if usernameTextField.text == nil {
+            usernameTextField.placeholder = "请输入用户名"
+        }else {
+            username = usernameTextField.text!
+            if let password = passwordTextField.text {
+                passwordTextField.placeholder = "请输入密码"
+                if UserService.login(username: username, password: password) {
+                    if let navigation = navigationController {
+                        navigation.popToRootViewControllerAnimated(true)
+                    }
+                }else{
+                    let alert = UIAlertView.init(title: "登录失败", message: "用户名不存在或密码错误", delegate: self, cancelButtonTitle: "重新登录")
+                    alert.show()
+                }
+            }
+            
         }
+        
     }
     
     override func viewDidLoad() {

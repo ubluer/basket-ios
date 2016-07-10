@@ -149,6 +149,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="登录" id="ULg-il-Xff"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="Ku0-NN-aJ2" id="42J-sw-aGX"/>
+                        <outlet property="usernameTextField" destination="OqS-hG-DbQ" id="Ahc-3C-ICS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -278,6 +282,31 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="person" id="tDz-P1-fMQ">
+                                                    <rect key="frame" x="15" y="0.0" width="43" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="cvX-vf-KcH">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="goW-V2-8X3" imageView="w6f-1K-cQk" style="IBUITableViewCellStyleDefault" id="FUD-fx-Wmh">
+                                        <rect key="frame" x="0.0" y="427" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FUD-fx-Wmh" id="Bow-zB-Mto">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="退出登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="goW-V2-8X3">
+                                                    <rect key="frame" x="73" y="0.0" width="512" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="person" id="w6f-1K-cQk">
                                                     <rect key="frame" x="15" y="0.0" width="43" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
@@ -720,7 +749,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="Login Segue" id="Bcc-K7-upw"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="LoginSegue" id="Bcc-K7-upw"/>
                         <segue destination="Olh-qW-ABu" kind="relationship" relationship="rootViewController" id="9u1-hx-zRU"/>
                     </connections>
                 </navigationController>
